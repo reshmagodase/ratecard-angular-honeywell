@@ -1,0 +1,91 @@
+<mat-toolbar class="toolbar-format magrin-auto padding-left10">
+    <img src="assets/images/logos/Honeywell_Logo_RGB_Red.png" class="img-brand">
+    <span class="brand-name">Rate Card Digitalization</span>
+    <div class="right-nav" id="logOutDiv">
+        <span class="cursor-pointer" (click)="openDefectLink()">
+            <span class="icon-size-defect"><i *ngIf="!isIEOrEdge" class="icon icon-tools" data-toggle="tooltip"
+                    data-placement="bottom" title="Defect/Enhancement Logger Tool"></i><i *ngIf="isIEOrEdge"
+                    class="icon icon-tools" data-toggle="tooltip" data-placement="bottom"
+                    title="Defect/Enhancement Logger Tool"></i> </span>
+        </span>
+        <span class="cursor-pointer" (click)="downloadHelpFile()">
+            <span class="icon-size" style="    position: relative;top: 5px;"><i *ngIf="!isIEOrEdge" class="icon icon-help" data-toggle="tooltip"
+                    data-placement="bottom" title="Download help file"></i><i *ngIf="isIEOrEdge"
+                    class="icon icon-badge-help" data-toggle="tooltip" data-placement="bottom"
+                    title="Download help file"></i> </span>
+        </span>
+
+        <span class="notification-format"></span>
+        <span class="profile-initial color-white" #menuBtn1 [matMenuTriggerFor]="menu"
+            (mouseenter)="openMyMenu()">{{userInitial}}</span>
+        <mat-menu #menu="matMenu" overlapTrigger="false">
+            <div class="dropDownMenu">
+                <ul>
+                    <li><a  class="greyC"> {{userName}}</a> </li>
+                    <li><a  class="whiteC">{{businessTitle}}</a> </li>
+                </ul>
+                <div class="logout">
+                    <button class="btn btn-secondary logoutBtn" (click)="logOut()">Sign Out</button>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar class="sub-toolbar color-white magrin-auto padding-left10">
+            <div class="button-container">
+                <div class="row">
+
+                    <div class="col-sm-2 sidenav-link" [ngClass]="{'active-link':activeLink == '/rate-card-dashboard'}"  style="width: 10%;" (click)="selectPage('rc-dashboard')">
+                        <span><mat-icon>assessment</mat-icon><span class="links"> Dashboard </span></span>
+                    </div>
+
+                    <div class="col-sm-2 sidenav-link" *ngIf="service.userRole == 'RateCardBuyer' || service.userRole == 'RateCardAdmin'" (click)="selectPage('create-rc')" [ngClass]="{'active-link':activeLink == '/add-rate-card'}" style="width: 15%;">
+                        <!-- <a class="sidenav-link" >
+                            <span><mat-icon>description</mat-icon> Add/Update RateCard </span>
+                        </a> -->
+                        <span><mat-icon>description</mat-icon><span class="links"> Add/Update RateCard </span></span>
+                    </div>
+                    <div class="col-sm-2 sidenav-link" *ngIf="service.userRole != 'RateCardBuyer'" (click)="selectPage('approve')" [ngClass]="{'active-link':activeLink == '/approve-reject'}"  style="width: 16.5%;">
+                        <!-- <a class="sidenav-link" (click)="selectPage('approve')">
+                            <span><mat-icon>check_circle</mat-icon>Approve/Reject RateCard</span>
+                        </a> -->
+                        <span><mat-icon>check_circle</mat-icon><span class="links"> Approve/Reject RateCard </span></span>
+                    </div>
+                    <!-- <div class="col-sm-2" style="width: 9.5%;">
+                    <a class="sidenav-link" (click)="selectPage('approval-screen')">
+                        <span><mat-icon>dashboard</mat-icon> Approval Screen </span>
+                    </a>
+                </div> -->
+                    <!--<div class="col-sm-2" style="width: 11.5%;">
+                    <a class="sidenav-link" (click)="selectPage('forecast')">
+                        <span><i class="material-icons">flight</i> New TravelForecast</span>
+                    </a>
+                </div>
+                    <div class="col-sm-2" style="width: 6.5%;">
+                    <a class="sidenav-link" (click)="selectPage('reports')">
+                        <span><i class="material-icons">pie_chart</i> Reports</span>
+                    </a>
+                </div>
+                    <div class="col-sm-2" style="width: 3.5%;">
+                    <a class="sidenav-link" (click)="selectPage('settings')">
+                        <span><i class="material-icons">settings</i> Configuration</span>
+                    </a>
+                </div> -->
+                </div>
+            </div>
+            <div class="version">Version: {{version}}</div>
+        </mat-toolbar>
+        <div style="margin-top: 3em;">
+            <router-outlet *ngIf="service.userDetails != null && service.userDetails != undefined">
+            </router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

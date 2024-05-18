@@ -1,0 +1,36 @@
+.btn-sm {
+  
+  border-radius: 5px !important;
+  width: 70px !important;
+  margin-right: 8px;
+  /* margin-top: 20px; */
+}
+
+.close:focus,
+.close:hover {
+  outline: none;
+}
+
+.modal-title {
+  font-weight: 800;
+  text-align: left;
+}
+
+.cancel-comment{
+  margin-top: 20px;
+}
+
+.modal-footer {
+  padding-bottom: 2%;
+  align-items: stretch;
+}
+
+.modal-body {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.modal-header{
+  margin-top: 15px;
+  align-items: start !important;
+}

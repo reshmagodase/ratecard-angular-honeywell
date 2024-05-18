@@ -1,0 +1,51 @@
+<div *ngIf="title == 'Error'">
+    <div class="errorMessage">
+      <ul>
+     <li class="icons"><span class="material-icons">
+           block
+          </span></li>
+     <li>
+       <p class="MainText">{{ title }}</p>
+       <p class="ErrorText">{{ message }} </p>
+     </li>
+     <li class="close"><span class="material-icons">clear
+      </span>
+      </ul>
+    </div> 
+  </div>
+   
+  <div *ngIf="title == 'Done'">
+    <div class="sucessMessage">
+      <ul>
+     <li class="icons"><span class="material-icons">
+      done
+    </span></li>
+    <li>
+       <p class="MainText">{{ title }}</p>
+       <p class="ErrorText">{{ message }} </p>
+    </li>
+    <li class="close"><span class="material-icons">clear
+      </span>
+      </ul>
+    </div>  
+  </div>
+  
+  <div *ngIf="title == 'Warning'">
+    <div >
+      <div class="worningMessage">
+        <ul>
+        <li class="icons"><span class="material-icons">
+               warning
+              </span></li>
+        <li>
+           <p class="MainText">{{ title }}</p>
+           <p class="ErrorText">{{ message }} </p>
+        </li>
+        <li class="close"><span class="material-icons">clear
+          </span>
+       </ul>
+      </div> 
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,155 @@
+.custom-title{
+    color: #111;
+}
+.custom-message{
+color: #333;
+}
+.errorMessage{
+position: relative;
+top: auto;
+right: 20px !important;
+background-color: #fff;
+border: 1px solid #ee3124;
+z-index: 99;
+margin-top: 10px !important;
+}
+.errorMessage ul{
+padding: 0px;
+margin-bottom: 0px;
+}
+.errorMessage ul li{
+list-style-type: none;
+display: inline-block;
+padding: 10px 15px;
+background-color: white;
+    vertical-align: middle;
+    opacity: 1;
+}
+.errorMessage ul li.icons{
+background-color: red;
+color: white;
+padding: 20px;
+}
+
+.errorMessage .MainText{
+margin-bottom: 0px;
+font-size: 15px;
+}
+.errorMessage .ErrorText{
+margin-bottom: 0px;
+font-size: 12px;
+}
+.errorMessage .material-icons{
+ vertical-align: text-bottom;
+}
+.errorMessage .close{
+background-color: white !important;
+padding: 17px 12px 17px 12px !important;
+}
+.errorMessage .close .material-icons{
+color: black;
+cursor: pointer;
+}
+
+
+
+
+.sucessMessage{
+position: relative;
+top: 20px !important;
+right: 20px !important;
+background-color: #fff;
+border: 1px solid green;
+z-index: 99;
+margin-top: 10px !important;  
+}
+.sucessMessage ul{
+padding: 0px;
+margin-bottom: 0px;
+}
+.sucessMessage ul li{
+list-style-type: none;
+display: inline-block;
+padding: 10px 15px;
+background-color: white;
+    vertical-align: middle;
+    opacity: 1;
+}
+.sucessMessage ul li.icons{
+background-color: green;
+color: white;
+padding: 20px;
+}
+
+.sucessMessage .MainText{
+margin-bottom: 0px;
+font-size: 15px;
+}
+.sucessMessage .ErrorText{
+margin-bottom: 0px;
+font-size: 12px;
+}
+.sucessMessage .material-icons{
+ vertical-align: text-bottom;
+}
+.sucessMessage .close{
+background-color: white !important;
+padding: 17px 12px 17px 12px !important;
+}
+.sucessMessage .close .material-icons{
+color: black;
+cursor: pointer;
+}
+
+
+
+
+.worningMessage{
+position: relative;
+top: 20px;
+right: 20px;
+background-color: #fff;
+border: 1px solid #ffc107;
+z-index: 99;  
+margin-top: 10px;
+}
+.worningMessage ul{
+padding: 0px;
+margin-bottom: 0px;
+}
+.worningMessage ul li{
+list-style-type: none;
+display: inline-block;
+padding: 10px 15px;
+background-color: white;
+    vertical-align: middle;
+    opacity: 1;
+}
+.worningMessage ul li.icons{
+background-color: #ffc107;
+color: white;
+padding: 20px;
+
+}
+
+.worningMessage .MainText{
+margin-bottom: 0px;
+font-size: 15px;
+}
+.worningMessage .ErrorText{
+margin-bottom: 0px;
+font-size: 12px;
+}
+.worningMessage .material-icons{
+ vertical-align: text-bottom;
+}
+.worningMessage .close{
+background-color: white !important;
+padding: 17px 12px 17px 12px !important;
+}
+.worningMessage .close .material-icons{
+color: black;
+cursor: pointer;
+}
+
+

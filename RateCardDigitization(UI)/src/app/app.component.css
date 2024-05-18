@@ -1,0 +1,306 @@
+.mat-drawer {
+  font-family: 'HoneywellSansWeb-Book';
+  background-color: #202020;
+  padding-bottom: 40px;
+  margin-bottom: -1px;
+  width: 200px;
+}
+
+
+.headerSticktyFix {
+  position: fixed;
+  overflow: hidden;
+  z-index: 999;
+  width: 100%;
+}
+
+
+
+.sub-toolbar {
+  background: #3a3838 !important;
+  height: 46px !important;
+  font-family: SansBold !important;
+  font-size: 14px !important;
+  float: right;
+}
+
+.version {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px -90px 10px 0px;
+  width: 16%, !important;
+  font-family: HoneywellSansWeb-Book;
+}
+
+.button-container {
+  width: 94% !important
+}
+
+.subnav-menu {
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+  font-family: SansMedium;
+  word-wrap: break-word;
+  background: inherit;
+  margin-top: 1px;
+  color: #d0d0d0;
+  text-transform: uppercase;
+}
+
+
+
+.toolbar-format {
+  height: 40px !important;
+  padding: 0px;
+  position: relative;
+  background-image: none;
+  background-color: #fff !important;
+  border-bottom: 1px solid #dfdfdf;
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #ccc;
+  min-height: 35px;
+}
+
+.img-brand {
+  height: 50px;
+}
+
+.brand-name {
+  border-left: 1px solid #dfdfdf;
+  font-family: HoneywellSansWeb-Book;
+  padding-left: 11px;
+  margin-left: 15px;
+  height: 100%;
+  color: #707070;
+  margin-top: 8px;
+  font-weight: bolder;
+}
+
+.right-nav {
+  position: absolute;
+  right: 1%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: HoneywellSansWeb-Bold;
+  display: flex;
+}
+
+.nav-links {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #707070;
+}
+
+.notification-format {
+  /* margin-left: 15px;
+  padding-left: 20px; */
+  border-left: 1px solid #dfdfdf;
+}
+
+.notification-badge {
+  margin-top: 5px;
+  font-size: 20px;
+  height: auto;
+  width: auto;
+}
+
+.profile-initial {
+  
+  margin-left: 11px;
+  background: #cdcdce;
+  height: 30px;
+  border-radius: 50px;
+  width: 30px;
+  font-size: 13px;
+  padding: 1px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+
+}
+
+.btn {
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 13px 36px !important;
+  text-shadow: none;
+  margin: 0px 0 !important;
+  font-family: HoneywellSansWeb-Medium;
+}
+
+.dropDownMenu {
+  border-color: #000;
+  background-color: #303030;
+  color: #fff;
+  padding: 15px 0px 20px;
+}
+
+.color-white {
+  color: white;
+}
+
+.dropDownMenu ul {
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.dropDownMenu ul li {
+  list-style-type: none;
+}
+
+.dropDownMenu ul li a {
+  color: white;
+  padding: 5px 15px !important;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.dropDownMenu ul li a.greyC {
+  color: #dfdfdf !important;
+  font-size: 14.5px;
+}
+
+.dropDownMenu ul li a.whiteC {
+  color: #fff !important;
+  font-size: 12px;
+}
+
+.logout {
+  padding: 0px 15px;
+}
+
+.logoutBtn {
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 8px 36px !important;
+  text-shadow: none;
+  margin: 0px 0 !important;
+  font-family: HoneywellSansWeb-Medium;
+  width: 100%;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+  /* IE10+ specific styles go here */
+  .right-nav {
+    position: relative !important;
+    left: 55% !important;
+    padding: 10px;
+    font-size: 14px;
+    font-family: HoneywellSansWeb-Bold;
+    display: flex;
+  }
+}
+
+.icon-size {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.icon-size-feedback {
+  font-size: 45px;
+  margin-right: 10px;
+}
+
+.icon-size-defect {
+  font-size: 30px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+::ng-deep .tooltip.in {
+  opacity: 1 !important;
+}
+
+.icon-size-info {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.tooltipcustom {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px dotted #666;
+  text-align: left;
+}
+
+
+.sub-toolbar {
+  background: #3a3838 !important;
+  height: 32px !important;
+  font-family: SansBold !important;
+  font-size: 14px !important;
+  float: right;
+}
+
+.version {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px -90px 10px 0px;
+  width: 16%, !important;
+  font-family: HoneywellSansWeb-Book;
+}
+
+.button-container {
+  width: 94% !important;
+}
+
+.sidenav-link {
+  color: white;
+  font-family: HoneywellSansWeb-Book;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.active-link {
+  background: #808080b5;
+}
+
+i.material-icons,
+mat-icon {
+  font-size: 20x;
+  vertical-align: middle;
+}
+
+.tl-link {
+  width: 5% !important;
+}
+
+.co-link {
+  width: 14% !important;
+}
+
+.navbarColor {
+  color: white;
+}
+
+.links{
+  margin: 3px;
+  color: white;
+  font-weight: normal;
+  font-size: 13px !important;
+}
+

@@ -1,0 +1,30 @@
+.ag-theme-alpine {
+  width: 100%;
+  height: 100%;
+}
+
+button.mat-icon-button {
+  line-height: 1;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.button-container {
+  display: flex;
+  gap: 2px;
+  justify-content: end;
+  width: auto;
+}
+
+.btn {
+  padding: 5px 5px !important;
+}
+
+:host ::ng-deep .mat-mdc-card-content:first-child{
+  padding-top: 2px !important;
+}

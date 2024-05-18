@@ -1,0 +1,215 @@
+.card-container {
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.mat-error {
+  color: red;
+}
+
+.group-dropdown-panel {
+  max-height: initial; /* This prevents the max height limit */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.button-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Disable the proposed work pack input */
+.mat-input-element:disabled {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.width150{
+  width: 35%;
+}
+
+.btn {
+  padding: 10px 10px !important;
+}
+
+.btn-col{
+  width:10% !important;
+}
+
+.usage-div{
+  margin-left: -23px;
+}
+
+.tool-card{
+  margin-top: -40px;
+}
+
+.reset-btn{
+  padding: 9px 10px !important;
+}
+.btn-div-container{
+  float:right;
+}
+
+.expand{    
+  cursor: pointer;
+  margin-left: 100%;
+  padding-left: 30%;
+}
+
+.export-div
+{
+  margin-left: -4px;
+}
+
+.select-col-btn{
+  margin-left: -19px;
+}
+
+.header-row{
+  height:60px;
+  background-color: #f8f8f8;
+  border: 1px solid #c1c5cc;
+  margin-left:0px !important;
+  margin-right:0px !important;
+  padding: 21px 13px;
+}
+
+.tool-label{
+  font-weight: 600;
+}
+
+.discipline-div{
+  width:25%;
+}
+
+.budget-div{
+  width: 18%;
+}
+
+.display-div{
+  width: 10%;
+}
+
+.display-txt{
+  margin: -19px;
+  font-size: 12.5px;
+  
+}
+
+.mat-input-element:disabled, .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+  color: rgb(0 0 0);
+  border-color: gray;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  
+  color: rgba(0, 0, 0, 0.12);
+  border-color: gray;
+}
+
+.unselect{
+  width: 14% !important;
+  margin-left: -37px;
+}
+
+
+.add-btn{
+  margin-left:-19px;
+}
+
+.draft-btn{
+  margin-left: -19px;
+}
+
+.plan-btn{
+  margin-left: -10px;
+}
+
+.submit-btn{
+  margin-left: -3px;
+}
+
+.column-dd{
+  margin-left: 5px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+.ddspan{
+  margin-left:2% !important;
+}
+
+.column-dd-tl{
+  font-size: 12px !important;
+  margin-right: 10px;
+  top: 5%;
+
+}
+
+.select-btn{
+  margin-left: 41.3% !important;
+}
+
+
+.clear{
+  color:red;
+  
+}
+
+::ng-deep .hide-checkbox .mat-pseudo-checkbox { display: none; }
+
+.page-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+
+
+
+
+.status-dd{
+  font-size: 11px !important;
+  margin-right: 10px;
+  top: 10%;
+  position: absolute;
+  width: 150px !important;
+  right: 64.5%;
+}
+
+.btn-holder{
+  margin-top: -18px !important;
+  text-align: right;
+  height: 0px;
+}
+
+
+:host ::ng-deep .mat-icon{
+  height: 30px;
+  width: 30px;
+}
+
+
+
+.btn {
+  padding: 5px 5px !important;
+}
+
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  height: 40px !important
+}
+
+:host ::ng-deep .mat-form-field-infix {
+  padding-top: 7px !important;
+}
+
+
+  

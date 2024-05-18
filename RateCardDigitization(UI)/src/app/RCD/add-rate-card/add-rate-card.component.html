@@ -1,0 +1,24 @@
+<mat-card>
+  <!-- <mat-card-header> -->
+    <!-- <mat-card-title>Dashboard</mat-card-title> -->
+   
+  <!-- </mat-card-header> -->
+  <mat-card-content>
+
+    <div class="button-container">
+      <button type="button" class="btn btn-primary btn-sm" (click)="addrc()">Add Rate Card</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="Update()">Update Rate Card</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Submit For Approval</button>
+      <!-- <button type="button" class="btn btn-primary btn-sm" (click)="generateExcelReport()">Report</button> -->
+    </div>
+
+  <ag-grid-angular #agGrid 
+  style="width: 100%;
+  height: calc(100vh - 165px);
+  padding: 5px 0px 10px 0px;" id="myGrid" class="ag-theme-alpine"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [columnDefs]="columnDefs" [gridOptions]="gridOptions"
+    (firstDataRendered)="onFirstDataRendered($event)">
+  </ag-grid-angular>
+
+</mat-card-content>
+</mat-card>

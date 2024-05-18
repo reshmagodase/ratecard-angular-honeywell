@@ -1,0 +1,31 @@
+<mat-card style="height: 100%;">
+    <mat-card-header>
+      <!-- <mat-card-title>Dashboard</mat-card-title> -->
+    </mat-card-header>
+    <mat-card-content>
+  
+    <ag-grid-angular #agGrid  style="width: 100%;
+    height: calc(60vh - 125px);
+    padding: 5px 0px 10px 0px;" id="myGrid" class="ag-theme-alpine"
+      [defaultColDef]="defaultColDef" [rowData]="rowData" [columnDefs]="columnDefs" [gridOptions]="gridOptions"
+      (firstDataRendered)="onFirstDataRendered($event)">
+    </ag-grid-angular>
+
+    <div>
+        <mat-form-field appearance="outline"  class="fieldformat form-field width80 small-field" style="width: 80%;">
+            <mat-label>Comment</mat-label>
+            <textarea matInput placeholder="Enter your comment" [(ngModel)]="formData.comment" name="comment"></textarea>
+            <mat-error *ngIf="formData.commentRequired && !formData.comment">Comment is required for rejection.</mat-error>
+          </mat-form-field>
+    </div>
+
+    <div class="toolbar">
+  
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" (click)="approve()">Approve</button>
+            <button mat-raised-button color="warn" type="button" (click)="reject()">Reject</button>
+          </div>
+        </div>
+  
+  </mat-card-content>
+  </mat-card>

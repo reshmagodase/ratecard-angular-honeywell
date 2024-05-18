@@ -1,0 +1,42 @@
+.ag-theme-custom .ag-header {
+  background-color: #007bff; /* Change to your desired color */
+  color: white; /* Change text color */
+}
+
+/* Change row background color on hover */
+.ag-theme-custom .ag-row-hover {
+  background-color: #f0f0f0; /* Change to your desired hover color */
+}
+
+/* Change selected row background color */
+.ag-theme-custom .ag-row-selected {
+  background-color: #e0e0e0; /* Change to your desired selected color */
+}
+
+.ag-theme-alpine {
+    width: 100%;
+    height: 100%;
+  }
+  
+  button.mat-icon-button {
+    line-height: 1;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 2px;
+    margin-top: -30px;
+    margin-left: 88%;
+  }
+  
+  .btn {
+    padding: 5px 5px !important;
+  }
+  

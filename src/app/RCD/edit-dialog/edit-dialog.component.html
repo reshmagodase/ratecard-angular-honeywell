@@ -1,0 +1,99 @@
+<mat-dialog-content>
+    <mat-card-header>
+      <mat-card-title>Edit Rate Card</mat-card-title>
+    </mat-card-header>
+    <form #rateCardForm="ngForm">
+      <br>
+      <div fxLayout="column" fxLayoutGap="12px">
+
+        <div fxLayout="row" fxLayoutGap="16px">
+          <!-- WorkPack -->
+          <mat-form-field appearance="outline" class="fieldformat form-field width150">
+            <mat-label>WorkPack</mat-label>
+            <mat-select [(ngModel)]="formData.sow.rateCardId" name="workPack" required
+              (selectionChange)="WorkPackSelectionChange(formData.sow.rateCardId)">
+              <mat-option *ngFor="let option of workPackOptions" [value]="option.rateCardId">{{ option.workPack
+                }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="!formData.sow.rateCardId">WorkPack is required.</mat-error>
+          </mat-form-field>
+
+          <!-- Vendor -->
+          <mat-form-field appearance="outline" class="fieldformat form-field width150">
+            <mat-label>Vendor</mat-label>
+            <mat-select [(ngModel)]="formData.vendor.vendorId" name="vendorId" 
+              (selectionChange)="VendorSelectionChange(formData.vendor.vendorId)" disabled>
+              <mat-option *ngFor="let option of vendorOptions" [value]="option.vendorId">{{ option.vendorName
+                }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="!formData.vendor.vendorId">Vendor is required.</mat-error>
+          </mat-form-field>
+
+        <!-- Proposed WorkPack -->
+        <mat-form-field appearance="outline" class="fieldformat form-field width150">
+          <mat-label>Proposed WorkPack Name</mat-label>
+          <input matInput [(ngModel)]="formData.sow.proposedworkPack" name="proposedworkPack">
+          <!-- <mat-error *ngIf="!formData.sow.proposedworkPack">WorkPack is required.</mat-error> -->
+        </mat-form-field>
+      </div>
+
+        <!-- SOW Rate INR & USD -->
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <mat-form-field appearance="outline" class="fieldformat form-field width100">
+            <mat-label>Current INR Rate</mat-label>
+            <input matInput [(ngModel)]="formData.sowRate" name="sowRate" type="number" min="0" required disabled>
+            <mat-error *ngIf="!formData.sowRate && !formData.sowRateUSD">SOW Rate (in INR) is required.</mat-error>
+            <mat-error *ngIf="formData.sowRate && formData.sowRate < 0">Please enter a positive value.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="fieldformat form-field width100">
+            <mat-label>Current USD Rate</mat-label>
+            <input matInput [(ngModel)]="formData.sowRateUSD" name="sowRateUSD" type="number" min="0" required disabled>
+            <mat-error *ngIf="!formData.sowRateUSD && !formData.sowRate">SOW Rate (in USD) is required.</mat-error>
+            <mat-error *ngIf="formData.sowRateUSD && formData.sowRateUSD < 0">Please enter a positive value.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="fieldformat form-field width100">
+            <mat-label>Proposed New INR Rate</mat-label>
+            <input matInput [(ngModel)]="formData.newproposedinrRate" name="newRate" type="number" min="0" required>
+            <mat-error *ngIf="!formData.newproposedinrRate && !formData.newproposedusdRate">New Rate (in INR) is
+              required.</mat-error>
+            <mat-error *ngIf="formData.newproposedinrRate && formData.newproposedinrRate < 0">Please enter a positive
+              value.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="fieldformat form-field width100">
+            <mat-label>Proposed New USD Rate</mat-label>
+            <input matInput [(ngModel)]="formData.newproposedusdRate" name="newRateUSD" type="number" min="0" required>
+            <mat-error *ngIf="!formData.newproposedusdRate && !formData.newproposedinrRate">New Rate (in USD) is
+              required.</mat-error>
+            <mat-error *ngIf="formData.newproposedusdRate && formData.newproposedusdRate < 0">Please enter a positive
+              value.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Group -->
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+        <mat-form-field appearance="outline" class="fieldformat form-field width80">
+          <mat-label>Group</mat-label>
+          <mat-select [(ngModel)]="formData.group.groupId" name="group" required multiple
+            panelClass="group-dropdown-panel" (selectionChange)="GroupSelectionChange(formData.group.groupId)">
+            <mat-option *ngFor="let option of groupOptions" [value]="option.groupId">{{ option.groupName }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="!formData.group.groupId">Group is required.</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="fieldformat form-field width80">
+          <mat-label>Account Indicator</mat-label>
+          <input matInput [(ngModel)]="formData.accountIndicator" name="accountIndicator" disabled>
+        </mat-form-field>
+        </div>
+        
+        <!-- Buttons -->
+        <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="end center">
+          <button mat-raised-button color="primary" type="submit" (click)="onSave(rateCardForm)">Save</button>
+          <button mat-raised-button color="warn" type="button" (click)="clearForm()">Cancel</button>
+        </div>
+
+      </div>
+    </form>
+</mat-dialog-content>
